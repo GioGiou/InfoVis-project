@@ -1,1 +1,1 @@
-# InfoVis Project
+# InfoViz Project
