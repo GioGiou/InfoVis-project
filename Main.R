@@ -49,7 +49,8 @@ ui <- fluidPage(theme = bs_theme(bootswatch = "sketchy"),
   css,
   # App title ----
   titlePanel("AniViz"),
-  mainPanel(
+  mainPanel(width =12,
+
     tabsetPanel(
       tabPanel("Score",
         fluidRow(
@@ -77,7 +78,8 @@ ui <- fluidPage(theme = bs_theme(bootswatch = "sketchy"),
           column(9,sliderInput("yearS","Year", min = year(min(data$start)),
                                 max = year(max(data$start)), value = c(2010,2022),
                                 width="100%")
-                 )
+                 ),
+          column(3)
         ),
         fluidRow(
           column(9, DT::dataTableOutput("tabS")),
